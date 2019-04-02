@@ -2,9 +2,22 @@ package com.company.DAO;
 
 import java.util.List;
 
+import javax.inject.Inject;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.stereotype.Repository;
+
 import com.company.VO.signInVO;
 
-public interface signInDAO {
+@Repository
+public class signInDAO implements signDAO{
+	private static final String namespace="com.company.mappers.signInMapper";
 	
-	public List<signInVO> signIn() throws Exception;
+	@Inject
+	private SqlSession sqlSession;
+	
+	@Override
+	public List<signInVO> signIn() throws Exception{
+		return sqlSession.selectList(namespace+".signIn");
+	}
 }

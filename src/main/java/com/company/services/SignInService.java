@@ -2,10 +2,21 @@ package com.company.services;
 
 import java.util.List;
 
+import javax.inject.Inject;
+
+import org.springframework.stereotype.Service;
+
+import com.company.DAO.signDAO;
 import com.company.VO.signInVO;
 
-public interface SignInService {
+@Service
+public class SignInService implements SignService{
+	@Inject
+	private signDAO dao;
 	
-	List<signInVO> signIn() throws Exception;
+	@Override
+	public List<signInVO> signIn() throws Exception{
+		return dao.signIn();
+	}
 
 }

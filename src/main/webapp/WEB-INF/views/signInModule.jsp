@@ -4,15 +4,15 @@
                     <div class="box">
                         <form action="${pageContext.request.contextPath}/signIn" method="POST">
                             <div class="field">       
-                                <div class="control has-icons-left">
-                                    <input class="input is-large" type="text" name="id" placeholder="아이디" required>
-                                    <span class="icon is-small is-left"><i class="fas fa-user"></i></span>
+                               <div class="control has-icons-left">
+                                    <input class="input is-large" type="text" name="id" placeholder="아이디" required autofocus>
+                                   <span class="icon is-small is-left"><i class="fas fa-user"></i></span>
                                 </div>
                             </div>
                             
                             <div class="field">
                                 <div class="control has-icons-left">
-                                    <input class="input is-large" type="password" name="pass" placeholder="패스워드" required autofocus>
+                                    <input class="input is-large" type="password" name="pass" placeholder="패스워드" required>
                      		        <span class="icon is-small is-left"><i class="fas fa-key"></i></span>
                                 </div>
                             </div>

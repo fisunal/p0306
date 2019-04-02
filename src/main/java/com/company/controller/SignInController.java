@@ -11,19 +11,22 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.company.VO.signInVO;
-import com.company.services.SignInService;
+import com.company.services.SignService;
 
 @Controller
 @SessionAttributes("id")
 public class SignInController {
 	@Inject
-	SignInService service;
+	SignService service;
 	
 	@PostMapping("/signIn")
 	public String signIn(Model model, @RequestParam(value="id") String id, @RequestParam(value="pass") String pass) throws Exception {
 		List<signInVO> list;
 		list=service.signIn();
+		System.out.println(list);
 		model.addAttribute("list", list);
+		model.addAttribute("id", id);
+		model.addAttribute("pass", pass);
 				return "signIn";
 	}
 }
