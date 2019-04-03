@@ -10,8 +10,8 @@ import org.springframework.stereotype.Repository;
 import com.company.VO.signInVO;
 
 @Repository
-public class signInDAO implements signDAO{
-	private static final String namespace="com.company.mappers.signInMapper";
+public class SignInDAOImpl implements SignInDAO{
+	private static final String namespace="com.company.mappers.signMapper";
 	
 	@Inject
 	private SqlSession sqlSession;

@@ -44,9 +44,14 @@
                                         <li><a href="">배송상태</a></li>
                                         <li><a href="">문의하기</a></li>
                                     </ul>
+<% if(session.getAttribute("id")==null){%>
                                     <span class="navbar-item">
                                             <span class="button is-white is-outlined modal-button" data-target="modal-card">로그인</span>
                                     </span>
+<% }else{ %><span class="navbar-item">
+				<span class="text"><%=session.getAttribute("id") %>님 환영합니다.<button class="button is-small is-white is-outlined" onclick="location.href='${pageContext.request.contextPath}/logout'">로그아웃</button></span>
+			</span>
+<% } %>
                                 </div>
                            </div>
                         </div>

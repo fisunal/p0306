@@ -6,6 +6,6 @@
 <configuration>
 	<typeAliases>		
 		<typeAlias alias="Test" type="com.company.bean.TestBean"/>
-		<typeAlias alias="SIGN" type="com.company.VO.signInVO"/>
+		<typeAlias alias="RSIGNIN" type="com.company.VO.signInVO"/>
 	</typeAliases>
 </configuration>
