@@ -1,6 +1,6 @@
 package com.company.VO;
 
-public class signInVO {
+public class SignInVO {
 	private String id;
 	private String password;
 	
@@ -16,6 +16,5 @@ public class signInVO {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
 	
 }

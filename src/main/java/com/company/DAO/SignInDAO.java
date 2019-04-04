@@ -2,10 +2,11 @@ package com.company.DAO;
 
 import java.util.List;
 
-import com.company.VO.signInVO;
-import com.company.VO.SignUpVO;
+import com.company.VO.IdCheckVO;
+import com.company.VO.SignInVO;
 
 public interface SignInDAO {
 	
-	public List<signInVO> signIn() throws Exception;
+	public List<SignInVO> signIn() throws Exception;
+	
 }

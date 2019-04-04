@@ -60,7 +60,7 @@
 		}}
 		}
 		function id_chk(){
-			window.open("id_dup.jsp?id="+document.writeform.id.value,target="_blank","width=500, menubar=no, resizable=no, scrollbars=no, location=no, toolbar=no, titlebar=no");
+			window.open("idcheck?id="+document.writeform.id.value,target="_blank","width=500, menubar=no, resizable=no, scrollbars=no, location=no, toolbar=no, titlebar=no");
 		}
 		function inputIdchk(){
 			document.writeform.idDuplication.value="idUncheck";
@@ -110,7 +110,7 @@
             </div>
          </section>
          <div class="box is-radius" style="margin:5% 30%;">
-         <form name="writeform" action="regiCs.jsp" method="POST">
+         <form name="writeform" action="./processing" method="POST">
 	<p style="font-size: 3em; text-align: center;">회원가입</p><br><br>
 	<div class="field">
 		<label class="label">아이디</label>
@@ -146,7 +146,7 @@
 		<label class="label">전화번호</label>
 		<div class="control">
 			<span class="icon is-left"><i class="fas fa-mobile-alt"></i></span>
-			<input class="input" type="text" name="hp"style="width:450px" autocomplete="off">
+			<input class="input" type="number" name="hp"style="width:450px" autocomplete="off">
 		</div>
 	</div>
 	<div class="field">

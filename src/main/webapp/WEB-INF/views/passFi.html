@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function send(){
+	window.open("sendACode.jsp?id="+document.pafiform.id.value+"&email="+document.pafiform.email.value,target="display_area","width=750, height=340, menubar=no, resizable=no, scrollbars=no, location=no, toolbar=no, titlebar=no");
+}
+</script>
+<meta charset="UTF-8">
+<title></title>
+<style>
+caption{
+margin-bottom:5px;
+line-height:100%;
+}
+p{
+font-size:2em;
+font-weight:bold;
+}
+.pafi{
+ margin:10% 30%;
+}
+</style>
+</head>
+<body>
+<div class="pafi">
+<form name="pafiform" action="passEmailSend.jsp" method="post">
+<table>
+	<caption><p>Password finder</p>To find your password, Follow the steps carefully<br>(We can't let you know about any account detail, so if you forget your ID or E-MAIL There is no way to find your account password)</caption>
+	<tr>
+		<td style="text-align:center;"><a href="frontPage.jsp"><input type="button" value="If you want to go Back to Log-in page, please click this"></a></td>
+	</tr>
+	<tr>
+		<td><br></td>
+	</tr>
+	<tr>
+		<td>Step one : Input your ID</td>
+	</tr>
+	<tr>
+		<td><input type="text" name="id" placeholder="input your ID at here" autocomplete="off"></td>
+	</tr>
+	<tr>
+		<td>Step two : Input your E-mail address to let us send you a check CODE</td>
+	</tr>
+	<tr>
+		<td><input type="email" name="email" placeholder="input your E-mail at here" style="width:250px;" autocomplete="off">&nbsp;&nbsp;<input type="button" value="receive a code" onclick="send()"></td>
+	</tr>
+	<tr>
+		<td><hr></td>
+	</tr>
+	<tr>
+		<td>Congratulation! only Final step is left. please input a code We sent to your E-mail</td>
+	</tr>
+	<tr>
+		<td><input type="text" name="code" placeholder="input a code at here" autocomplete="off"></td>
+	</tr>
+	<tr>
+		<td><input type="submit" value="confirm"></td>
+	</tr>
+</table>
+</form>
+</div>
+</body>
+</html>

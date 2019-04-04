@@ -7,7 +7,7 @@ import javax.inject.Inject;
 import org.springframework.stereotype.Service;
 
 import com.company.DAO.SignInDAO;
-import com.company.VO.signInVO;
+import com.company.VO.SignInVO;
 
 @Service
 public class SignInServiceImpl implements SignInService{
@@ -15,7 +15,7 @@ public class SignInServiceImpl implements SignInService{
 	private SignInDAO dao;
 	
 	@Override
-	public List<signInVO> signIn() throws Exception{
+	public List<SignInVO> signIn() throws Exception{
 		return dao.signIn();
 	}
 

@@ -2,10 +2,10 @@
 <!DOCTYPE configuration
     PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-config.dtd">
-
 <configuration>
-	<typeAliases>		
+	<typeAliases>
+		<typeAlias alias="RSIGN" type="com.company.VO.SignInVO"/>		
 		<typeAlias alias="Test" type="com.company.bean.TestBean"/>
-		<typeAlias alias="RSIGNIN" type="com.company.VO.signInVO"/>
+		<package name="com.company.VO.SignUpVO"/>
 	</typeAliases>
 </configuration>
