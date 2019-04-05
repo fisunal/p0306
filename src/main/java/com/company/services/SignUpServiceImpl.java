@@ -1,7 +1,5 @@
 package com.company.services;
 
-import java.util.List;
-
 import javax.inject.Inject;
 
 import org.springframework.stereotype.Service;
@@ -15,8 +13,9 @@ public class SignUpServiceImpl implements SignUpService{
 	private SignUpDAO dao;
 
 	@Override
-	public List<SignUpVO> signUp() throws Exception {
-		return dao.signUp();
+	public int signUp(SignUpVO signUpVO) throws Exception {
+		
+		return dao.signUp(signUpVO);
 	}
 
 }

@@ -15,48 +15,15 @@
         <link rel="stylesheet" type="text/css" href="../css/hero.css">
         <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
         <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-        
-        <!-- Script -->
-        
+     
+         <!-- Script -->
+         
     </head>
     <body>
         <section class="hero is-primary is-large">
             <div class="hero-head">
             <nav class="navbar is-fixed-top" style="background-color: hsl(348, 100%, 61%)">
-                    <div class="container">
-                        <div class="navbar-brand">
-                            <div class="navbar-item">
-                              <img src="./resources/images/logo.svg" alt="혜다 : 건강한 과자를 생각하다.">
-                            </div>
-                            <span class="navbar-burger burger" data-target="navbarMenu">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </span>
-                        </div>
-                        <div id="navbarMenu" class="navbar-menu">
-                            <div class="navbar-end">
-                                <div class="tabs is-right">
-                                    <ul>
-                                        <li><a href="./index">첫화면으로</a></li>
-                                        <li><a href="">혜다:의 이야기</a></li>
-                                        <li><a href="">주문하기</a></li>
-                                        <li><a href="">배송상태</a></li>
-                                        <li><a href="">문의하기</a></li>
-                                    </ul>
-<% if(session.getAttribute("id")==null){%>
-                                    <span class="navbar-item">
-                                            <span class="button is-white is-outlined modal-button" data-target="modal-card">로그인</span>
-                                    </span>
-<% }else{ %><span class="navbar-item">
-				<span class="text"><%=session.getAttribute("id") %>님 환영합니다.<button class="button is-small is-white is-outlined" onclick="location.href='${pageContext.request.contextPath}/logout'">로그아웃</button></span>
-			</span>
-<% } %>
-                                </div>
-                           </div>
-                        </div>
-                     </div>
-                </nav>
+<%@ include file="../navbar.jsp" %>
             </div>
             <div class="hero-body">
                 <div class="container has-text-centered">
@@ -258,7 +225,7 @@
     <div id="modal-card" class="modal modal-fx-slideBottom">
     <div class="modal-background"></div>
         <!-- content -->
-        	<%@ include file="signInModule.jsp"  %>
+        	<%@ include file="../signInModule.jsp"  %>
         <!-- end content -->
     </body>
 </html>

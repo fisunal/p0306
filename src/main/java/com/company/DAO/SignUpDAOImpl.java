@@ -1,7 +1,5 @@
 package com.company.DAO;
 
-import java.util.List;
-
 import javax.inject.Inject;
 
 import org.apache.ibatis.session.SqlSession;
@@ -17,8 +15,8 @@ public class SignUpDAOImpl implements SignUpDAO{
 	private SqlSession sqlSession;
 	
 	@Override
-	public List<SignUpVO> signUp() throws Exception {
-		return sqlSession.selectList(namespace+"signUp");
+	public int signUp(SignUpVO signUpVO)  throws Exception {
+		return sqlSession.insert(namespace+".signUp",signUpVO);
 	}
 
 }

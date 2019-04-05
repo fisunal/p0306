@@ -24,11 +24,10 @@ public class SignInController {
 		List<SignInVO> list;
 		list=service.signIn();
 		for(int i=0;i<list.size();i++) {
-			System.out.println(i);
 			if(list.get(i).getId().equals(id)) {
 				if(list.get(i).getPassword().equals(pass)) {
 					session.setAttribute("id", id);
-					view="mainPage";
+					view="redirect:/index";
 					break;
 				}else{
 					view="SignInPage";
@@ -48,7 +47,7 @@ public class SignInController {
 	@GetMapping("/logout")
 	public String logout(HttpSession session) {
 		session.invalidate();
-		return "mainPage";
+		return "redirect:/index";
 	}
 
 }
